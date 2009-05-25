@@ -1,0 +1,150 @@
+*{
+	font-family: tahoma,verdana;
+	font-size:11px;
+}
+
+body{
+	background-color:white;
+}
+
+.Taskboard{
+	background-color:#F4F4F4;
+}
+
+.Taskboard th{
+	background-color:#E1E1E1;
+}
+
+td.Label{
+	border-bottom: 1px solid silver;
+	vertical-align:bottom;
+}
+
+.Column{
+	border-right:2px solid silver;
+	border-bottom:2px solid silver;
+	float:left;
+	margin-left: 10px;
+	background-color:#EEEEEE;
+	width:260px;
+}
+
+.Column h3{
+	margin:0px;
+	color:#EEEEEE;
+	background-color:gray;
+	text-align:center;
+	font-weight:normal;
+	font-size:14px;
+}
+
+ul.TaskboardColumn{
+	border:0px solid green;
+	width:245px;
+	margin:0px;
+	padding:0px;
+	padding-bottom:80px
+}
+
+ul.TaskboardColumn li{
+	border: 0px solid blue;
+	list-style-type: none;
+	margin:5px;
+}
+
+
+.Task2 *{
+	font-family: "Lucida Console", tahoma,verdana;	
+}
+
+.Task{
+	background-color:#FFFF99;
+	border-right:1px solid silver;
+	border-bottom:1px solid silver;
+	padding:4px;
+	width:225px;
+}
+
+.TaskDetail{
+	padding-top:4px;
+}
+
+.TaskDetail, .TaskDetail *{
+	font-size:11px;
+	color:gray;
+}
+
+
+.Button{
+	padding:3px;
+	border: 1px solid silver;
+	width:80px;
+	text-align:center;
+	cursor:pointer;
+	float:left;
+	margin-left:5px;
+}
+
+.Short{
+	width:100px;
+}
+
+.Medium{
+	width:200px;
+}
+
+.Large{
+	width:400px;
+}
+
+#menu, #menu *{
+	color: #339966;
+	text-decoration: none;
+}
+
+/*necessário para as tabs*/
+.ui-tabs .ui-tabs-hide {
+     display: none;
+}
+
+#ui-datepicker-div { 
+	z-index: 999999999; 
+}
+
+#ui-datepicker-buttonpane{  
+	border:1px solid green;
+}
+
+/*********************** BACKLOG **************************/
+
+.ProductBacklog, .SprintBacklog{
+	border:0px solid green;
+	font-weight:bold;
+	padding:0px;
+	padding-bottom:10px	
+}
+
+.ProductBacklog li, .SprintBacklog li{
+	border:0px;
+	border-right:1px solid silver;
+	border-bottom:1px solid silver;
+	list-style-type: none;
+	margin-top:5px;
+	font-weight:normal;
+	padding:2px;
+	cursor:move;
+}
+
+.SprintBacklog li{
+	margin-left:35px;
+}
+
+img.Toggler{
+	cursor:pointer; 
+	vertical-align:bottom;
+}
+
+.ImageButton{
+	cursor:pointer; 
+	vertical-align:bottom;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Features: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'styles' %>
+
+
+  <link rel="stylesheet" href="http://<%= request.env["HTTP_HOST"] %>/javascripts/jquery-ui-1.7.1/themes/base/ui.all.css" type="text/css" media="screen" title="Flora (Default)" /> 
+
+  <%= javascript_include_tag 'jquery-1.3.2.min.js' %>
+  <%= javascript_include_tag 'jquery.template.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.7.1/ui/ui.core.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.7.1/ui/ui.draggable.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.7.1/ui/ui.sortable.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.7.1/ui/ui.dialog.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.7.1/ui/ui.resizable.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.7.1/ui/ui.tabs.js' %>
+
+  <script type="text/javascript" src="/charts/FusionCharts.js"></script> 
+
+  <%= javascript_include_tag 'reenagile.config.js' %>
+  <%= javascript_include_tag 'greenagile.taskboard.js' %>
+
+</head>
+<body>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield %>
+
+</body>
+</html>

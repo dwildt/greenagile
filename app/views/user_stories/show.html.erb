@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @user_story.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @user_story.description %>
+</p>
+
+<p>
+  <b>Roi:</b>
+  <%=h @user_story.roi %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_story_path(@user_story) %> |
+<%= link_to 'Back', user_stories_path %>

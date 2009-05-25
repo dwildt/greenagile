@@ -1,0 +1,73 @@
+
+<div id="menu"> 
+	<a href="index.html">Home</a> | <a href="#">Projects</a> | <a href="#">Users</a> | <a href="taskboard.html">Taskboard</a> | <a href="planning.html">Planning</a> | <a href="#">Logoff</a> 
+</div> 
+
+<hr style="border:0px; border-bottom:1px solid #339966"/> 
+
+<div style="margin-left:0px;"> 
+	<h1 style="font-size:20px; color:gray">JHorasComplementares</h1> 
+</div> 
+
+<div style="position:absolute; top:0px; right:0px; margin-top:11px; margin-right:7px;"> 
+	<font style="font-size:18px; color:#339966; font-weight:bold">GreenAgile</font> 
+</div> 
+
+Story:
+<select class="Large"> 
+	<optgroup label="Sprint 1 [04/04/2009 - 15/04/2009]"> 
+		<option>TODOS</option> 
+		<option>Cadastrar Usuários</option> 
+		<option>Emitir Relatório de Comissões</option> 
+	</optgroup> 
+</select> 
+
+<br><br> 
+
+<table border="0" cellspacing="10" bordercolor="silver" class="Taskboard"> 
+<tr> 
+	<th>Não Iniciado
+	<img src="images/add.png" style="vertical-align:bottom; margin-left:10px; cursor:pointer;" title="Add Task" onclick="newTask()"/> 
+	</th> 
+	<th>Iniciado</th> 
+	<th>Pronto</th> 
+	<td valign="top" rowspan="2" style="background-color:white"> 
+		<div id="divchart"></div> 
+		<div id="" style="text-align:center; padding-top:10px;"> 
+			<strong>velocidade:</strong> 20
+			<br> 
+			<strong>impedimentos:</strong> 2
+		</div> 
+	</td> 
+</tr> 
+<tr> 
+	<td valign="top"> 
+		<ul id="Column_NotStarted" class="TaskboardColumn"></ul> 
+	</td> 
+	<td valign="top"> 
+		<ul id="Column_InProgress" class="TaskboardColumn"></ul> 
+	</td> 
+	<td valign="top"> 
+		<ul id="Column_Done" class="TaskboardColumn"></ul> 
+	</td> 
+</tr> 
+</table> 
+
+ 
+<div id="dialog" style="z-index:1000;">Dialog Box</div> 
+ 
+ 
+<!-- trash -->		
+<div id="debugWindow"></div> 
+<!-- /trash -->		
+ 
+  
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--
+ 
+$(document).ready(function() {
+	initTaskboard();
+});
+ 
+//--> 
+</SCRIPT>

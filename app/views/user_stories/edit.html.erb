@@ -1,0 +1,24 @@
+<h1>Editing user_story</h1>
+
+<% form_for(@user_story) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :roi %><br />
+    <%= f.text_field :roi %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user_story %> |
+<%= link_to 'Back', user_stories_path %>

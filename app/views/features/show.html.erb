@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @feature.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @feature.description %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%=h @feature.priority %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @feature.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_feature_path(@feature) %> |
+<%= link_to 'Back', features_path %>

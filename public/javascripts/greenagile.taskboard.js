@@ -1,0 +1,170 @@
+/**
+ * @author lucianocosta
+ */
+
+var URL_NEW_TASK = "features/new";
+
+var URL_EDIT_TASK = "features/#id/edit";
+
+var URL_ITEMS_NOT_STARTED = "features.json";
+
+var URL_ITEMS_IN_PROGRESS = "features.json";
+
+var URL_ITEMS_DONE = "features.json";
+
+
+var items_NotStarted = new Array();
+var items_InProgress = new Array();
+var items_Done = new Array();
+
+/**
+ * Exibe formulário de edição da Tarefa.
+ */
+function showTask(taskId){
+	var url = URL_EDIT_TASK.replace(/#id/, taskId);
+	$("#dialog").load( url );
+	$("#dialog").dialog('open');
+}
+
+/**
+ * Exibe formulário de criação de Tarefa.
+ */
+function newTask(){
+	$("#dialog").load( URL_NEW_TASK );
+	$("#dialog").dialog('open');
+}
+
+/**
+ * Carrega/atualiza Burndown Chart.
+ */
+function loadChart(){
+	var chart = new FusionCharts("charts/FCF_Line.swf", "ChartId", "300", "250",0,0);
+	chart.setDataURL("xml/Line2D.xml");
+	//chart.setTransparent(true);
+	chart.render("divchart");	
+}
+
+/**
+ * Salva status e ordem das tarefas.
+ */
+function saveAll(){
+	items_NotStarted = $('#Column_NotStarted').sortable('toArray');
+	items_InProgress = $('#Column_InProgress').sortable('toArray');
+	items_Done = $('#Column_Done').sortable('toArray');
+	
+	debug();// remover depois	
+}
+
+
+function debug(){
+	$("#debugWindow").html("<br/><b>NotStarted:</b> " + items_NotStarted + '<br><b>InProgress:</b> ' + items_InProgress + '<br><b>Done:</b> ' + items_Done);
+}
+
+/**
+ * Template html de uma Tarefa.
+ * Permite renderização de JSON on-the-fly =)
+ */
+var t = "";
+t += "<li id='${id}' ondblclick='showTask(\"${id}\")'>";
+t += "	<div class='Task'>";
+t += "		<div class='TaskTitle'>${title}</div>";
+t += "		<div class='TaskDetail'>#${points} | ${person}</div>";
+t += "	</div>";
+t += "</li>";
+var taskTemplate = $.template(t);
+
+
+function saveTask(){
+	// obs: pegar valores do formulario
+	var task = {};
+	task.id = 'Stan';
+	task.title = 'feeling';
+	task.points = '9';
+	task.person = 'Aline Dev';
+	createNewTask(task);
+	$("#dialog").dialog('close');
+}
+
+
+/**
+ * Permite criar novas tarefas em tempo de execuçao.
+ * @param {Object} obj representacao JSON de uma tarefa.
+ */
+function createNewTask(obj){
+	$("#Column_NotStarted").append( taskTemplate , obj );
+}
+
+
+/**
+ * Codigo de inicializacao da tela.
+ */
+function initTaskboard(){
+	
+	/**
+	 * Cria janela para edição da tarefa.
+	 */
+	$("#dialog").dialog({ 
+		title:"Detalhes da Tarefa",
+		modal: true,
+		//draggable:false,
+		autoOpen: false,
+		height:350,
+		width:550,
+		//position:['left','middle']
+		position:[100,80]
+	});
+	
+	
+	/**
+	 * Conectores das colunas do kanban.
+	 */
+	$("#Column_NotStarted").sortable({ 
+	    connectWith: ["#Column_InProgress"]
+	}); 
+	
+	$("#Column_InProgress").sortable({ 
+	    connectWith: ["#Column_NotStarted","#Column_Done"] 
+	});
+	
+	$("#Column_Done").sortable({ 
+	    connectWith: ["#Column_InProgress"] 
+	});
+	
+	
+	/**
+	 * Bind de Eventos: Executa função "saveAll()" ao reordenar as tarefas.
+	 */
+	$('#Column_NotStarted').bind('sortstop', function(event, ui) { saveAll(); });
+	$('#Column_InProgress').bind('sortstop', function(event, ui) { saveAll(); });
+	$('#Column_Done').bind('sortstop', function(event, ui) { saveAll(); });
+	$('#Column_Done').bind('sortreceive', function(event, ui) { loadChart(); });
+	$('#Column_Done').bind('sortremove', function(event, ui) { loadChart(); });
+
+	loadColumn("#Column_NotStarted", URL_ITEMS_NOT_STARTED);
+
+	loadColumn("#Column_InProgress", URL_ITEMS_IN_PROGRESS);
+	
+	loadColumn("#Column_Done", URL_ITEMS_DONE);
+
+
+
+	//loadChart();
+
+	//saveAll(); // remover depois
+
+}
+
+
+/**
+ * Carrega Coluna do Taskboard através de requisição Ajax.
+ * 
+ * @param {String} id da coluna.
+ * @param {String} url.
+ */
+function loadColumn(columnId, url){
+	jQuery.getJSON( url ,	function(data,status){ 
+		$.each(data, function(i,item){
+			$( columnId ).append( taskTemplate , item.feature);
+		});
+	}); 
+}
