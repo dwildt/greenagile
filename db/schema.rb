@@ -9,21 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090521131227) do
+ActiveRecord::Schema.define(:version => 20090525062828) do
 
   create_table "features", :force => true do |t|
     t.string   "title"
     t.text     "description"
+    t.integer  "size"
     t.integer  "priority"
     t.string   "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user_stories", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "roi"
+    t.integer  "iteration"
+    t.integer  "release"
+    t.string   "type"
+    t.text     "acceptanceCriteria"
+    t.date     "doneDate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

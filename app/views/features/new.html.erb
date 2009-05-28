@@ -1,5 +1,4 @@
 <%=form_for(@feature) do |f| %>
-
   <%= f.error_messages %>
 
   <p>
@@ -11,12 +10,32 @@
     <%= f.text_area :description %>
   </p>
   <p>
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </p>
+  <p>
     <%= f.label :priority %><br />
     <%= f.text_field :priority %>
   </p>
   <p>
     <%= f.label :status %><br />
     <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :iteration %><br />
+    <%= f.text_field :iteration %>
+  </p>
+  <p>
+    <%= f.label :release %><br />
+    <%= f.text_field :release %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :acceptanceCriteria %><br />
+    <%= f.text_area :acceptanceCriteria %>
   </p>
   <p>
     <%= f.submit 'Create' %>

@@ -6,11 +6,11 @@ var URL_NEW_TASK = "features/new";
 
 var URL_EDIT_TASK = "features/#id/edit";
 
-var URL_ITEMS_NOT_STARTED = "features.json";
+var URL_ITEMS_NOT_STARTED = "features/not_started";
 
-var URL_ITEMS_IN_PROGRESS = "features.json";
+var URL_ITEMS_IN_PROGRESS = "features/in_progress";
 
-var URL_ITEMS_DONE = "features.json";
+var URL_ITEMS_DONE = "features/done";
 
 
 var items_NotStarted = new Array();
@@ -68,7 +68,7 @@ var t = "";
 t += "<li id='${id}' ondblclick='showTask(\"${id}\")'>";
 t += "	<div class='Task'>";
 t += "		<div class='TaskTitle'>${title}</div>";
-t += "		<div class='TaskDetail'>#${points} | ${person}</div>";
+t += "		<div class='TaskDetail'>#${size} | ${type}</div>";
 t += "	</div>";
 t += "</li>";
 var taskTemplate = $.template(t);

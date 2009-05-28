@@ -11,6 +11,33 @@ class FeaturesController < ApplicationController
     end
   end
 
+  # GET /features/not_started.json
+  def not_started
+    @features = Feature.find(:all,:conditions => ["status = ?","not started"], :order => "priority")
+ 
+    respond_to do |format|
+      format.json  { render :json => @features }
+    end
+  end
+
+  # GET /features/in_progress.json
+  def in_progress
+    @features = Feature.find(:all,:conditions => ["status = ?","in progress"], :order => "priority")
+
+    respond_to do |format|
+      format.json  { render :json => @features }
+    end
+  end
+
+  # GET /features/done.json
+  def done
+    @features = Feature.find(:all,:conditions => ["status = ?","done"], :order => "priority")
+
+    respond_to do |format|
+      format.json  { render :json => @features }
+    end
+  end
+  
   # GET /features/1
   # GET /features/1.xml
   def show
@@ -30,13 +57,13 @@ class FeaturesController < ApplicationController
     respond_to do |format|
       format.html { render :layout => "blank" }
       format.xml  { render :xml => @feature }
-    end    
+    end
   end
 
   # GET /features/1/edit
   def edit
     @feature = Feature.find(params[:id])
-    render :layout => "blank" 
+	render :layout => "blank"
   end
 
   # POST /features
@@ -48,7 +75,7 @@ class FeaturesController < ApplicationController
       if @feature.save
         flash[:notice] = 'Feature was successfully created.'
         #format.html { redirect_to(@feature) }
-        format.html { redirect_to("/features") }
+		format.html { redirect_to("/features") }
         format.xml  { render :xml => @feature, :status => :created, :location => @feature }
       else
         format.html { render :action => "new" }
@@ -67,7 +94,7 @@ class FeaturesController < ApplicationController
         flash[:notice] = 'Feature was successfully updated.'
         #format.html { redirect_to(@feature) }
         format.html { redirect_to("/features") }
-        format.xml  { head :ok }
+		format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @feature.errors, :status => :unprocessable_entity }
