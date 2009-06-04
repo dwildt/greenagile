@@ -6,11 +6,8 @@ var URL_NEW_TASK = "features/new";
 
 var URL_EDIT_TASK = "features/#id/edit";
 
-var URL_ITEMS_NOT_STARTED = "features/not_started";
+var URL_ITEMS = "features/search_status";
 
-var URL_ITEMS_IN_PROGRESS = "features/in_progress";
-
-var URL_ITEMS_DONE = "features/done";
 
 
 var items_NotStarted = new Array();
@@ -48,9 +45,9 @@ function loadChart(){
  * Salva status e ordem das tarefas.
  */
 function saveAll(){
-	items_NotStarted = $('#Column_NotStarted').sortable('toArray');
-	items_InProgress = $('#Column_InProgress').sortable('toArray');
-	items_Done = $('#Column_Done').sortable('toArray');
+	items_NotStarted = $('#NotStarted').sortable('toArray');
+	items_InProgress = $('#InProgress').sortable('toArray');
+	items_Done = $('#Done').sortable('toArray');
 	
 	debug();// remover depois	
 }
@@ -66,9 +63,9 @@ function debug(){
  */
 var t = "";
 t += "<li id='${id}' ondblclick='showTask(\"${id}\")'>";
-t += "	<div class='Task'>";
+t += "	<div class='Task ${category}'>";
 t += "		<div class='TaskTitle'>${title}</div>";
-t += "		<div class='TaskDetail'>#${size} | ${type}</div>";
+t += "		<div class='TaskDetail'>#${size} | ${category}</div>";
 t += "	</div>";
 t += "</li>";
 var taskTemplate = $.template(t);
@@ -91,7 +88,7 @@ function saveTask(){
  * @param {Object} obj representacao JSON de uma tarefa.
  */
 function createNewTask(obj){
-	$("#Column_NotStarted").append( taskTemplate , obj );
+	$("#NotStarted").append( taskTemplate , obj );
 }
 
 
@@ -118,33 +115,36 @@ function initTaskboard(){
 	/**
 	 * Conectores das colunas do kanban.
 	 */
-	$("#Column_NotStarted").sortable({ 
-	    connectWith: ["#Column_InProgress"]
+	$("#NotStarted").sortable({ 
+	    connectWith: ["#InProgress"]
 	}); 
 	
-	$("#Column_InProgress").sortable({ 
-	    connectWith: ["#Column_NotStarted","#Column_Done"] 
+	$("#InProgress").sortable({ 
+	    connectWith: ["#NotStarted","#Done"] 
 	});
 	
-	$("#Column_Done").sortable({ 
-	    connectWith: ["#Column_InProgress"] 
+	$("#Done").sortable({ 
+	    connectWith: ["#InProgress"] 
 	});
 	
 	
 	/**
 	 * Bind de Eventos: Executa função "saveAll()" ao reordenar as tarefas.
 	 */
-	$('#Column_NotStarted').bind('sortstop', function(event, ui) { saveAll(); });
-	$('#Column_InProgress').bind('sortstop', function(event, ui) { saveAll(); });
-	$('#Column_Done').bind('sortstop', function(event, ui) { saveAll(); });
-	$('#Column_Done').bind('sortreceive', function(event, ui) { loadChart(); });
-	$('#Column_Done').bind('sortremove', function(event, ui) { loadChart(); });
+	$('#NotStarted').bind('sortstop', function(event, ui) { saveAll(); });
+	$('#NotStarted').bind('sortreceive', function(event, ui) { changeStatus( $(ui.item).attr('id'), $(this).attr('id') ); });
+	$('#InProgress').bind('sortreceive', function(event, ui) { changeStatus( $(ui.item).attr('id'), $(this).attr('id') ); });
+	$('#Done').bind('sortreceive', function(event, ui) { changeStatus( $(ui.item).attr('id'), $(this).attr('id') ); });
+	$('#InProgress').bind('sortstop', function(event, ui) { saveAll(); });
+	$('#Done').bind('sortstop', function(event, ui) { saveAll(); });
+	$('#Done').bind('sortreceive', function(event, ui) { loadChart(); });
+	$('#Done').bind('sortremove', function(event, ui) { loadChart(); });
 
-	loadColumn("#Column_NotStarted", URL_ITEMS_NOT_STARTED);
+	loadColumn("#NotStarted", URL_ITEMS + "/NotStarted");
 
-	loadColumn("#Column_InProgress", URL_ITEMS_IN_PROGRESS);
+	loadColumn("#InProgress", URL_ITEMS +"/InProgress");
 	
-	loadColumn("#Column_Done", URL_ITEMS_DONE);
+	loadColumn("#Done", URL_ITEMS +"/Done");
 
 
 
@@ -167,4 +167,15 @@ function loadColumn(columnId, url){
 			$( columnId ).append( taskTemplate , item.feature);
 		});
 	}); 
+}
+
+
+function changeStatus(featureId, status){
+	$.ajax({
+	  url: "features/change_status/"+featureId+"/"+status,
+	  cache: false,
+	  success: function(html){
+		loadColumn("#"+status, URL_ITEMS +"/"+status);
+	  }
+	});
 }

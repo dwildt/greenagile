@@ -57,12 +57,23 @@ ul.TaskboardColumn li{
 	font-family: "Lucida Console", tahoma,verdana;	
 }
 
-.Task{
-	background-color:#FFFF99;
+.Task {
 	border-right:1px solid silver;
 	border-bottom:1px solid silver;
 	padding:4px;
 	width:225px;
+}
+
+.feature{
+	background-color:#FFFF99;
+}
+
+.spike{
+	background-color:#00FF00;
+}
+
+.defect{
+	background-color:#FF0000;
 }
 
 .TaskDetail{

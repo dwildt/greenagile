@@ -11,33 +11,15 @@ class FeaturesController < ApplicationController
     end
   end
 
-  # GET /features/not_started.json
-  def not_started
-    @features = Feature.find(:all,:conditions => ["status = ?","not started"], :order => "priority")
+  # GET /features/search_status.json
+  def search_status
+    @features = Feature.find(:all,:conditions => ["status = ?",params[:id]], :order => "priority")
  
     respond_to do |format|
       format.json  { render :json => @features }
     end
   end
 
-  # GET /features/in_progress.json
-  def in_progress
-    @features = Feature.find(:all,:conditions => ["status = ?","in progress"], :order => "priority")
-
-    respond_to do |format|
-      format.json  { render :json => @features }
-    end
-  end
-
-  # GET /features/done.json
-  def done
-    @features = Feature.find(:all,:conditions => ["status = ?","done"], :order => "priority")
-
-    respond_to do |format|
-      format.json  { render :json => @features }
-    end
-  end
-  
   # GET /features/1
   # GET /features/1.xml
   def show
@@ -113,4 +95,18 @@ class FeaturesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-end
+  
+  def change_status
+    @feature = Feature.find(params[:id])
+	@feature.status = params[:status]
+	@feature.save
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @features }
+      format.json  { render :json => @features }
+    end
+  end
+ end
+
+
+
