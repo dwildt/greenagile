@@ -5,9 +5,11 @@ one:
   description: MyText
   priority: 1
   status: MyString
+  category: feature
 
 two:
   title: MyString
   description: MyText
   priority: 1
   status: MyString
+  category: spike

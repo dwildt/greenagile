@@ -1,0 +1,1440 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:14:05) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES(NULL, NULL, NULL, NULL, NULL, '2009-06-10 23:14:05', NULL, NULL, NULL, NULL, NULL, '2009-06-10 23:14:05')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 16ms (DB: 47) | 302 Found [http://test.host/features?]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:14:05) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mFeature Destroy (0.0ms)[0m   [0;1mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:14:05) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 171ms (View: 156, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:14:05) [GET]
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:14:05) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 15) | 200 OK [http://test.host/features/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:14:05) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:14:05) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:44:18', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:44:18')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:44:27) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 31ms (View: 16, DB: 94) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:44:28) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:44:28) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (15.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 421ms (View: 406, DB: 15) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:44:28) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:44:28) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (16.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:44:28) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 15ms (View: 15, DB: 16) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (16.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:44:28) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 16) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:46:08', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:46:08')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:46:08', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:46:08')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:46:18) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 63ms (View: 47, DB: 63) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:46:19) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:46:19) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 140ms (View: 140, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:46:19) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:46:19) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:46:19) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:46:19) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:49:39', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:49:39')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:49:39', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:49:39')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:49:39', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:49:39')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:49:49) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 63ms (View: 47, DB: 78) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:49:49) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:49:49) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 125ms (View: 125, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:49:49) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:49:49) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:49:49) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:49:49) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:50:46', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:50:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:50:46', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:50:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, NULL, '2009-06-10 23:50:46', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:50:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:50:57) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 78ms (View: 47, DB: 62) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:50:57) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 15ms (DB: 15) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:50:57) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 125ms (View: 125, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:50:57) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:50:57) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:50:57) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:50:57) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:51:43) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 78ms (View: 63, DB: 78) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:51:43) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:51:43) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 312ms (View: 312, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:51:44) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:51:44) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:51:44) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:51:44) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/edit
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-10 23:55:04', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:55:04')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-10 23:55:04', 'teste', NULL, NULL, 'teste', NULL, '2009-06-10 23:55:04')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 20:55:15) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 78ms (View: 62, DB: 63) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 20:55:16) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 15ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 20:55:16) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 359ms (View: 359, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 20:55:16) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 20:55:16) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 20:55:16) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 20:55:16) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 00:03:21', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:03:21')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 00:03:21', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:03:21')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 21:03:31) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 94ms (View: 47, DB: 140) | 200 OK [http://test.host/features?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 21:03:31) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 21:03:31) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 140ms (View: 140, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 21:03:31) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 21:03:31) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 21:03:31) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 21:03:31) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 00:09:47', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:09:47')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 00:09:47', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:09:47')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#featurecreate953125641 (for 0.0.0.0 at 2009-06-10 21:09:58) [POST]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 21:09:58) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 21:09:58) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 140ms (View: 140, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 21:09:58) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 21:09:58) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 21:09:58) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 21:09:58) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 00:11:15', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:11:15')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 00:11:15', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:11:15')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 21:11:24) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 31ms (View: 31, DB: 78) | 200 OK [http://test.host/features?]
+
+
+Processing FeaturesController#feature (for 0.0.0.0 at 2009-06-10 21:11:24) [PUT]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 21:11:24) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mFeature Destroy (0.0ms)[0m   [0;1mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `features` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 21:11:24) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 296ms (View: 296, DB: 16) | 200 OK [http://test.host/features/953125641/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 21:11:24) [GET]
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 21:11:24) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 21:11:24) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 21:11:24) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 00:12:50', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:12:50')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 00:12:50', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:12:50')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 21:13:02) [POST]
+  Parameters: {"feature"=>{}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 31ms (View: 31, DB: 47) | 200 OK [http://test.host/features?]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController##<Feature:0x4fc9d48> (for 0.0.0.0 at 2009-06-10 21:13:02) [PUT]
+  Parameters: {"feature"=>{}}
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 21:13:02) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (0.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 21:13:02) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 109ms (View: 109, DB: 0) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 21:13:02) [GET]
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 21:13:02) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 21:13:02) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 21:13:02) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 16ms (DB: 0) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (1.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 00:18:15', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:18:15')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (1.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 00:18:15', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:18:15')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (1.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 00:19:54', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:19:54')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 00:19:54', 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 00:19:54')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 21:20:05) [POST]
+  Parameters: {"feature"=>#<Feature id: 953125641, title: "MyString", description: "MyText", size: nil, priority: 1, status: "MyString", iteration: nil, release: nil, category: "feature", acceptanceCriteria: nil, doneDate: nil, created_at: "2009-06-11 00:20:05", updated_at: "2009-06-11 00:20:05">}
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 21:20:05) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (1.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 4ms (DB: 79) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 21:20:05) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 199ms (View: 198, DB: 3) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 21:20:05) [GET]
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 12ms (View: 11, DB: 2) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 21:20:05) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 21:20:06) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 6ms (View: 4, DB: 3) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 21:20:06) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/features/953125641?]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 22:25:46) [POST]
+  Parameters: {"feature"=>#<Feature id: 953125641, title: "MyString", description: "MyText", size: nil, priority: 1, status: "MyString", iteration: nil, release: nil, category: "feature", acceptanceCriteria: nil, doneDate: nil, created_at: "2009-06-11 01:25:46", updated_at: "2009-06-11 01:25:46", roi: nil>}
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 22:25:46) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (1.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 3ms (DB: 101) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 22:25:46) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 227ms (View: 226, DB: 4) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 22:25:46) [GET]
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 33ms (View: 30, DB: 2) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 22:25:46) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 19ms (View: 18, DB: 2) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 22:25:46) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 16ms (View: 13, DB: 3) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 22:25:46) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (2.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 22:26:48) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (1.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 13ms (DB: 65) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 22:26:48) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 462ms (View: 460, DB: 7) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 22:26:49) [GET]
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 13ms (View: 12, DB: 1) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 22:26:49) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 22:26:49) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 6ms (View: 5, DB: 3) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 22:26:49) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (1.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `roi`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'feature', '2009-06-11 01:27:33', 0, 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 01:27:33')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (1.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `roi`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 01:27:33', 0, 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 01:27:33')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Create (0.0ms)[0m   [0mINSERT INTO `features` (`status`, `iteration`, `acceptanceCriteria`, `size`, `category`, `updated_at`, `roi`, `title`, `priority`, `doneDate`, `description`, `release`, `created_at`) VALUES('done', NULL, NULL, NULL, 'spike', '2009-06-11 01:27:33', 0, 'teste', NULL, NULL, 'teste', NULL, '2009-06-11 01:27:33')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#create (for 0.0.0.0 at 2009-06-10 22:27:45) [POST]
+  Parameters: {"feature"=>#<Feature id: 953125641, title: "MyString", description: "MyText", size: nil, priority: 1, status: "MyString", iteration: nil, release: nil, category: "feature", acceptanceCriteria: nil, doneDate: nil, created_at: "2009-06-11 01:27:44", updated_at: "2009-06-11 01:27:44", roi: nil>}
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#destroy (for 0.0.0.0 at 2009-06-10 22:27:45) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFeature Destroy (1.0ms)[0m   [0mDELETE FROM `features` WHERE `id` = 953125641[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/features
+Completed in 9ms (DB: 101) | 302 Found [http://test.host/features/953125641]
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `features` [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Load (2.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#edit (for 0.0.0.0 at 2009-06-10 22:27:45) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/blank
+Rendering features/edit
+Completed in 183ms (View: 180, DB: 7) | 200 OK [http://test.host/features/953125641/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+
+
+Processing FeaturesController#index (for 0.0.0.0 at 2009-06-10 22:27:45) [GET]
+  [4;36;1mFeature Load (1.0ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 12ms (View: 11, DB: 2) | 200 OK [http://test.host/features]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FeaturesController#new (for 0.0.0.0 at 2009-06-10 22:27:45) [GET]
+Rendering template within layouts/blank
+Rendering features/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/features/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#show (for 0.0.0.0 at 2009-06-10 22:27:45) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/features/953125641]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+
+
+Processing FeaturesController#update (for 0.0.0.0 at 2009-06-10 22:27:45) [PUT]
+  Parameters: {"feature"=>{}, "id"=>"953125641"}
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 953125641) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/features
+Rendering features/edit
+Completed in 12ms (View: 8, DB: 2) | 200 OK [http://test.host/features/953125641?]
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
