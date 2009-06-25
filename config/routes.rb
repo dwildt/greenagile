@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :feature_statuses
+
   map.connect 'features/change_status/:id/:status', :controller => 'features', :action => 'change_status'
   map.connect 'features/done', :controller => 'features', :action => 'done'
   map.connect 'features/in_progress', :controller => 'features', :action => 'in_progress'

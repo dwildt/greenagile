@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @feature_status.name %>
+</p>
+
+<p>
+  <b>Displayname:</b>
+  <%=h @feature_status.displayName %>
+</p>
+
+
+<%= link_to 'Edit', edit_feature_status_path(@feature_status) %> |
+<%= link_to 'Back', feature_statuses_path %>

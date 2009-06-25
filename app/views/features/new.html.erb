@@ -17,15 +17,19 @@
   </p>
   <p>
     <%= f.label :size %><br />
-    <%= f.text_field :size %>
-  </p>
+    
+	<%= select_tag 'feature[size]', 
+               options_for_select([1, 2, 3, 5, 8, 13],@feature.size) %>	
+	</p>
   <p>
     <%= f.label :priority %><br />
     <%= f.text_field :priority %>
   </p>
   <p>
     <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <%= select_tag 'feature[status]', 
+               options_for_select(FeatureStatus.all.collect { |c| [c.displayName, c.name] },@feature.status) %>
+  
   </p>
   <p>
     <%= f.label :iteration %><br />
@@ -37,7 +41,8 @@
   </p>
   <p>
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+         <%= select_tag 'feature[category]', 
+               options_for_select([["Feature","feature"], ["Defect","defect"], ["Spike","spike"]],@feature.category) %>
   </p>
   <p>
     <%= f.label :acceptanceCriteria %><br />
